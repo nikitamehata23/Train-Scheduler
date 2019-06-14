@@ -5,7 +5,7 @@ var destination;
 var firstArrival;
 var frequency;
 var minAway;
-var database;
+// var database;
 var trainFirebaseData;
 var newFirebaseData;
 var time;
@@ -22,22 +22,19 @@ $(document).ready(function () {
     clock = setInterval(runningClock , 1000);
  
          // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAowoj5m78XUKJUi_xLBcccTlzIYqbRosA",
-    authDomain: "trainscheduler-619b5.firebaseapp.com",
-    databaseURL: "https://trainscheduler-619b5.firebaseio.com",
-    projectId: "trainscheduler-619b5",
-    storageBucket: "trainscheduler-619b5.appspot.com",
-    messagingSenderId: "614612854656",
-    appId: "1:614612854656:web:14cb857bac896e58"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-    // Initialize Firebase
-    var firebaseConfig =
-
-    database = firebase.database();
+         var firebaseConfig = {
+            apiKey: "AIzaSyAowoj5m78XUKJUi_xLBcccTlzIYqbRosA",
+            authDomain: "trainscheduler-619b5.firebaseapp.com",
+            databaseURL: "https://trainscheduler-619b5.firebaseio.com",
+            projectId: "trainscheduler-619b5",
+            storageBucket: "trainscheduler-619b5.appspot.com",
+            messagingSenderId: "614612854656",
+            appId: "1:614612854656:web:14cb857bac896e58"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        
+   var database = firebase.database();
 
     $("#submitButton").on("click", function (event) {
     
@@ -60,14 +57,14 @@ $(document).ready(function () {
             Datadest: destination,
             DatafirstArrival: firstArrival,
             Datafrequency: frequency,
-            DataminAyay:minAway,
-            TimeStamp: firebase.database.ServerValue.TIMESTAMP
+            // DataminAyay:minAway,
+            // TimeStamp: firebase.database.ServerValue.TIMESTAMP
         };
-        console.log(name);
-        console.log(destination);
-        console.log(firstArrival);
-        console.log(frequency);
-        console.log(minAway);
+        console.log("name",name);
+        console.log("destination",destination);
+        console.log("firdtArrival",firstArrival);
+        console.log("frequency",frequency);
+        // console.log("minAway",minAway);
 
         //    Variable for firebase to link train easier
         database.ref().push(trainFirebaseData);
@@ -89,7 +86,7 @@ $(document).ready(function () {
         console.log(currentTime);
         //  Convert Time and configure for Future use by pushing firstArrival back 1 year
         var firstArrivalConverted = moment(snapArrival , "HH:mm A").subtract(1, "years");
-        console.log(firstArrivalconverted);
+        console.log(firstArrivalConverted);
         //  Calculate now vs First Arrival
         var diff = moment().diff(moment(firstArrivalConverted) , "minutes");
         console.log(diff);
