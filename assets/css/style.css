@@ -53,42 +53,4 @@ td {
 }
 
 
-.hero-text {
-		text-align: center;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: antiquewhite;
-}
-th,
-button {
-		background-color:pink;
-		color: rgb(15, 56, 131);
-}
-h4,
-tr,
-td,
-label {
-		color: #2b5e92;
-}
-.btn-primary {
-		color: antiquewhite;
-		background-color: #344b65;
-		border-color: #344b65;
-}
-iframe {
-width: 1px;
-min-width: 100%;
-*width: 100%;
-overflow: auto;
-}
-.hero-image {
-	height: 50%;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	margin-bottom: 50px;
-}
+
