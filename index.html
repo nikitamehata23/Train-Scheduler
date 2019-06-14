@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- autorefresh the page after 1 minute
+    <meta http-equiv="Refresh" content="60">  -->
+	<title>Train Schedules</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- bootstrap jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap javascript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    
+
+</head>
+
+<body>
+    <!-- "hero image" header -->
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Train Schedules</h1>
+			<p>Let's Go!!</p>
+			<p id="time"></p>
+        </div>
+    </div>
+
+    <!-- Current Train Schedule -->
+    <div class="container">
+        <div>
+            
+            <h4>Train Scheduler</h4>
+            <table class="table table-hover table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="all-display">
+                    <tr>
+                        <td>Polar Express</td>
+                        <td>North Pole</td>
+                        <td>525600</td>
+                        <td>12:00 AM</td>
+                        <td>281226</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Add breaks between table and input form -->
+        <hr />
+        <hr />
+        <!-- Input form for new trains -->
+        <div class="row">
+            <div class="col">
+                <h4>Add Train</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Train Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Add train name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Add destination">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">First Train Time (HH:mm - Military Time)</label>
+                        <input type="text" class="form-control" id="time" placeholder="Add first train time">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="Add train frequency">
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary" id="add-train">Submit New Train</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- link to jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <!-- Specific Firebase products we want (Database) -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <!-- link to js file -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</body>
+
+</html>

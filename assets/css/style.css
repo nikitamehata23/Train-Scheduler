@@ -1,0 +1,94 @@
+
+body {
+	margin: 2% 5%;
+	background: url("https://wonderfulengineering.com/wp-content/uploads/2014/09/yellow-wallpaper-7.jpg");
+}
+
+.jumbotron {
+	text-align: center;
+	background: pink;
+	color:rgb(16, 66, 16);
+}
+
+h1, p {
+	text-shadow: 0 0 20px #000000;
+}
+
+td {
+	border-right:2px  solid #ddd;
+	border-bottom: 2px solid #ddd;
+	border-top: 0;
+}
+
+th {
+	text-align: center;
+	border-bottom: 2px solid #000000 !important;
+	border-right: 2px solid #000000 !important;
+
+}
+
+th:last-child, td:last-child {
+	border-right: none !important;
+}
+
+.panel, .jumbotron {
+	border: 5px solid black !important;
+	border-radius: 10px;
+}
+
+td {
+	text-align: center;
+}
+.panel{
+		font-family:Lobster;
+}
+.btn {
+	color:white;
+	background-color: red;
+	width: 220px;
+}
+.btn:hover{
+	background-color: green;
+	color:yellow;
+}
+
+
+.hero-text {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: antiquewhite;
+}
+th,
+button {
+		background-color:pink;
+		color: rgb(15, 56, 131);
+}
+h4,
+tr,
+td,
+label {
+		color: #2b5e92;
+}
+.btn-primary {
+		color: antiquewhite;
+		background-color: #344b65;
+		border-color: #344b65;
+}
+iframe {
+width: 1px;
+min-width: 100%;
+*width: 100%;
+overflow: auto;
+}
+.hero-image {
+	height: 50%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	margin-bottom: 50px;
+}
