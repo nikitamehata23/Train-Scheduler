@@ -1,16 +1,5 @@
 
-// Global Variables
-var name;
-var destination;
-var firstArrival;
-var frequency;
-var minAway;
-// var database;
-var trainFirebaseData;
-var newFirebaseData;
-var time;
-var clock;
-$(document).ready(function () {
+
 
 
     // the timer at the top
