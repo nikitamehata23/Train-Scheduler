@@ -103,8 +103,11 @@ $(document).ready(function () {
 
     });
 
-  
-    
+    function clear() {
+        $("#trainNameInput").val("");
+        $("#destinationInput").val("");
+        $("#firstTrainTimeInput").val("");
+        $("#frequencyInput").val("");
 
         
     }
