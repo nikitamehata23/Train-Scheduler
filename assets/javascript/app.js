@@ -22,7 +22,15 @@ $(document).ready(function () {
     clock = setInterval(runningClock , 1000);
  
          // Your web app's Firebase configuration
-        
+         var firebaseConfig = {
+            apiKey: "AIzaSyAowoj5m78XUKJUi_xLBcccTlzIYqbRosA",
+            authDomain: "trainscheduler-619b5.firebaseapp.com",
+            databaseURL: "https://trainscheduler-619b5.firebaseio.com",
+            projectId: "trainscheduler-619b5",
+            storageBucket: "trainscheduler-619b5.appspot.com",
+            messagingSenderId: "614612854656",
+            appId: "1:614612854656:web:14cb857bac896e58"
+          };
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
         
