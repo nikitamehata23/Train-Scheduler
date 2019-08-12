@@ -75,7 +75,10 @@ $(document).ready(function () {
     });
     database.ref().on("child_added", function (childSnapshot) {
         //  make variable to ease reference
-    
+        var snapName = childSnapshot.val().DatatrainName;
+        var snapDest = childSnapshot.val().Datadest;
+        var snapFreq = childSnapshot.val().Datafrequency;
+        var snapArrival = childSnapshot.val().DatafirstArrival;
 
        
         //  Current Time
